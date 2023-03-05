@@ -1,80 +1,28 @@
-ody {
-    margin: 0;
-    margin-top: 50px;
-    font-family: sans-serif;
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-header {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    line-height: 50px;
-    background-color: #eee;
+body {
+  background: #f1f1f1;
 }
-
-header * {
-    display: inline;
-    height: 50px;
+.loader {
+  border: 10px solid #222;
+  width: 80px;
+  height: 80px;
+  /* bringing to middle */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border-top-color: transparent;
+  /* addding spin */
+  animation: spin 0.7s linear infinite;
 }
-
-header ul {
-    padding: 0;
-}
-
-header li {
-    margin-left: 20px;
-}
-
-section {
-    height: 100vh;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
-    background-size: cover; /* Add this line */
-    background-position: center center; /* Add this line */
-    background-repeat: no-repeat; /* Add this line */
-    background-attachment: fixed; /* Add this line */
-}
-
-#hero .profile-img {
-    width: 300px;
-    border-radius: 50%;
-}
-
-footer {
-    text-align: center;
-    padding: 50px;
-}
-
-#hero h1 {
-    font-size: 3em;
-}
-
-section h2 {
-    font-size: 2.5em;
-}
-
-section h3 {
-    font-size: 1.5em;
-}
-
-header a {
-    text-decoration: none;
-    color: black;
-}
-
-/* Add everything below here */
-
-#about {
-    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fold-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28312.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fblack-background&tbnid=tPEsZpn7WjdaWM&vet=12ahUKEwjFrv6u_sT9AhWJn_0HHd29Dd0QMygAegUIARC8AQ..i&docid=mBCTv3goEvlgfM&w=626&h=310&itg=1&q=black%20background&ved=2ahUKEwjFrv6u_sT9AhWJn_0HHd29Dd0QMygAegUIARC8AQ');
-}
-
-#contact {
-    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/canyon.jpg');
+/* i am stoping the animation for now */
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
